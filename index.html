@@ -1,6 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="uk" data-palette="ivory">
 <head>
+  <script>
+    (function() {
+      const saved = localStorage.getItem('beautyMama_palette') || document.documentElement.getAttribute('data-palette') || 'ivory';
+      document.documentElement.setAttribute('data-palette', saved);
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beauty MAMA — Premium Beauty Space</title>
@@ -273,13 +279,24 @@
     <p class="footer__copy">© 2024 Beauty MAMA. Усі права захищені.</p>
     <!-- Palette Switcher -->
     <div class="palette-switcher">
-      <button class="palette-switcher__btn active" data-palette="noir" data-name="Noir" aria-label="Noir"></button>
+      <button class="palette-switcher__btn" data-palette="noir" data-name="Noir" aria-label="Noir"></button>
       <button class="palette-switcher__btn" data-palette="ivory" data-name="Ivory" aria-label="Ivory"></button>
       <button class="palette-switcher__btn" data-palette="blush" data-name="Blush" aria-label="Blush"></button>
       <button class="palette-switcher__btn" data-palette="burgundy" data-name="Burgundy" aria-label="Burgundy"></button>
       <button class="palette-switcher__btn" data-palette="onyx" data-name="Onyx" aria-label="Onyx"></button>
       <button class="palette-switcher__btn" data-palette="ink" data-name="Ink" aria-label="Ink"></button>
       <button class="palette-switcher__btn" data-palette="contrast" data-name="Contrast" aria-label="Contrast"></button>
+      <button class="palette-switcher__btn" data-palette="emerald" data-name="Emerald" aria-label="Emerald"></button>
+      <button class="palette-switcher__btn" data-palette="midnight" data-name="Midnight" aria-label="Midnight"></button>
+      <button class="palette-switcher__btn" data-palette="sakura" data-name="Sakura" aria-label="Sakura"></button>
+      <button class="palette-switcher__btn" data-palette="espresso" data-name="Espresso" aria-label="Espresso"></button>
+      <button class="palette-switcher__btn" data-palette="lavender" data-name="Lavender" aria-label="Lavender"></button>
+      <button class="palette-switcher__btn" data-palette="olive" data-name="Olive" aria-label="Olive"></button>
+      <button class="palette-switcher__btn" data-palette="copper" data-name="Copper" aria-label="Copper"></button>
+      <button class="palette-switcher__btn" data-palette="platinum" data-name="Platinum" aria-label="Platinum"></button>
+      <button class="palette-switcher__btn" data-palette="terracotta" data-name="Terracotta" aria-label="Terracotta"></button>
+      <button class="palette-switcher__btn" data-palette="ocean" data-name="Ocean" aria-label="Ocean"></button>
+      <button class="palette-switcher__btn" data-palette="aura" data-name="Aura" aria-label="Aura"></button>
     </div>
   </footer>
 

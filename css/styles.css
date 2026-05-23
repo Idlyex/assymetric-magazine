@@ -1,4 +1,4 @@
-﻿/* ===== BEAUTY MAMA — Shared Base Styles ===== */
+/* ===== BEAUTY MAMA — Shared Base Styles ===== */
 /* Mobile-first | No border-radius | No gradients | No box-shadow */
 
 /* --- Google Fonts Import --- */
@@ -6,6 +6,16 @@
 
 /* --- CSS Custom Properties --- */
 :root {
+  /* Palette Colors Start */
+  --color-bg: #faf8f5;
+  --color-surface: #f0ece6;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666666;
+  --color-accent: #8b6914;
+  --color-border: #e0dcd6;
+  --color-overlay: rgba(0, 0, 0, 0.5);
+  /* Palette Colors End */
+
   /* Typography */
   --font-display: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
@@ -94,6 +104,116 @@
   --color-accent: #000000;
   --color-border: #e0e0e0;
   --color-overlay: rgba(0, 0, 0, 0.55);
+}
+
+[data-palette="emerald"] {
+  --color-bg: #071a13;
+  --color-surface: #0d2d22;
+  --color-text: #e6f0ec;
+  --color-text-muted: #8fae9f;
+  --color-accent: #d4af37;
+  --color-border: #173e31;
+  --color-overlay: rgba(7, 26, 19, 0.65);
+}
+
+[data-palette="midnight"] {
+  --color-bg: #0b1325;
+  --color-surface: #111d35;
+  --color-text: #f0f4f8;
+  --color-text-muted: #8ba0b5;
+  --color-accent: #e5c158;
+  --color-border: #1e2d4a;
+  --color-overlay: rgba(11, 19, 37, 0.65);
+}
+
+[data-palette="sakura"] {
+  --color-bg: #fff0f2;
+  --color-surface: #ffd6db;
+  --color-text: #3d1a21;
+  --color-text-muted: #8f5863;
+  --color-accent: #d6336c;
+  --color-border: #ffb3bd;
+  --color-overlay: rgba(61, 26, 33, 0.5);
+}
+
+[data-palette="espresso"] {
+  --color-bg: #1b120f;
+  --color-surface: #2b1d18;
+  --color-text: #f7f3f0;
+  --color-text-muted: #bfae9e;
+  --color-accent: #dfb15b;
+  --color-border: #3d2c25;
+  --color-overlay: rgba(27, 18, 15, 0.65);
+}
+
+[data-palette="lavender"] {
+  --color-bg: #f4f0fa;
+  --color-surface: #e8dffd;
+  --color-text: #201530;
+  --color-text-muted: #6e5d8f;
+  --color-accent: #7048e8;
+  --color-border: #d3c2fa;
+  --color-overlay: rgba(32, 21, 48, 0.5);
+}
+
+[data-palette="olive"] {
+  --color-bg: #f4f5f0;
+  --color-surface: #e6e8db;
+  --color-text: #242b1f;
+  --color-text-muted: #66705d;
+  --color-accent: #708060;
+  --color-border: #d2d4c3;
+  --color-overlay: rgba(36, 43, 31, 0.5);
+}
+
+[data-palette="copper"] {
+  --color-bg: #16110e;
+  --color-surface: #261e1a;
+  --color-text: #f7f0eb;
+  --color-text-muted: #bda596;
+  --color-accent: #e07a5f;
+  --color-border: #3c2e28;
+  --color-overlay: rgba(22, 17, 14, 0.65);
+}
+
+[data-palette="platinum"] {
+  --color-bg: #f8f9fa;
+  --color-surface: #e9ecef;
+  --color-text: #212529;
+  --color-text-muted: #6c757d;
+  --color-accent: #495057;
+  --color-border: #dee2e6;
+  --color-overlay: rgba(33, 37, 41, 0.5);
+}
+
+[data-palette="terracotta"] {
+  --color-bg: #fdf6f0;
+  --color-surface: #f7e5d5;
+  --color-text: #3d1d11;
+  --color-text-muted: #8c5c48;
+  --color-accent: #d96a3f;
+  --color-border: #edd1ba;
+  --color-overlay: rgba(61, 29, 17, 0.5);
+}
+
+[data-palette="ocean"] {
+  --color-bg: #051f20;
+  --color-surface: #0b3c3d;
+  --color-text: #e6f7f7;
+  --color-text-muted: #8abfb0;
+  --color-accent: #24a19c;
+  --color-border: #155e5f;
+  --color-overlay: rgba(5, 31, 32, 0.65);
+}
+
+[data-palette="aura"] {
+  --color-bg: #07050f;
+  --color-surface: #15102a;
+  --color-text: #f2f0fa;
+  --color-text-muted: #9c94c0;
+  --color-accent: #a64eff;
+  --color-border: #2c2354;
+  --color-overlay: rgba(7, 5, 15, 0.65);
 }
 
 /* --- Reset & Base --- */
@@ -399,6 +519,7 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 8px;
   padding: var(--space-md) 0;
   margin-top: var(--space-md);
@@ -431,6 +552,17 @@ ul, ol {
 .palette-switcher__btn[data-palette="onyx"] { background-color: #121212; }
 .palette-switcher__btn[data-palette="ink"] { background-color: #0d1117; }
 .palette-switcher__btn[data-palette="contrast"] { background-color: #ffffff; }
+.palette-switcher__btn[data-palette="emerald"] { background-color: #071a13; }
+.palette-switcher__btn[data-palette="midnight"] { background-color: #0b1325; }
+.palette-switcher__btn[data-palette="sakura"] { background-color: #fff0f2; }
+.palette-switcher__btn[data-palette="espresso"] { background-color: #1b120f; }
+.palette-switcher__btn[data-palette="lavender"] { background-color: #f4f0fa; }
+.palette-switcher__btn[data-palette="olive"] { background-color: #f4f5f0; }
+.palette-switcher__btn[data-palette="copper"] { background-color: #16110e; }
+.palette-switcher__btn[data-palette="platinum"] { background-color: #f8f9fa; }
+.palette-switcher__btn[data-palette="terracotta"] { background-color: #fdf6f0; }
+.palette-switcher__btn[data-palette="ocean"] { background-color: #051f20; }
+.palette-switcher__btn[data-palette="aura"] { background-color: #07050f; }
 
 /* Tooltip with palette name on hover */
 .palette-switcher__btn::after {
